@@ -1,5 +1,7 @@
 
 {% load staticfiles %}
+{% load sass_tags %}
+{% load static %}
 
 <!doctype html>
 
@@ -9,9 +11,10 @@
 
   <title>SWFilms</title>
   <link rel="icon" href="{% static 'image/favicon.ico' %}"/>
+  
+  <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" />
 
   {% block styles %}
-  <link rel="stylesheet" href="{% static 'css/test.css' %}">
   <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.min.css' %}">
   {% endblock %}
   {% block scripts %}
@@ -21,7 +24,7 @@
 
 <body>
 <div style="display: none;">Star Wars API</div>
-<div class="container"> 
+<div class="container-fluid"> 
     {% block content %}
 
     {% endblock %}

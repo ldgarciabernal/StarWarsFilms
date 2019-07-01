@@ -1,8 +1,3 @@
-.hola {
-    color: red;
-    font-size: 15px;
-}
-
 * {
     cursor: url('/static/image/lightsaber_cursor.png'), auto;	
 }
@@ -25,4 +20,9 @@ body, html {
 	left: 0;
 	right: 0;
 	background-color: #ffffff;
+}
+
+
+.homeLogo {
+    width: 18rem;
 }

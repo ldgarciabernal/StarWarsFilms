@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'film'
+    'film',
+    'apiConsumer',
+    'sass_processor',
 ]
 
 MIDDLEWARE = [
@@ -120,7 +122,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
+STATICFILES_DIRS = ( os.path.join('static'), )
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder'
 ]
+
+SASS_PROCESSOR_ROOT = 'StarWarsFilms/static/'
