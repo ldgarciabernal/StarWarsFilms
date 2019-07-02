@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'film',
     'apiConsumer',
     'sass_processor',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,5 @@ STATICFILES_FINDERS = [
 ]
 
 SASS_PROCESSOR_ROOT = 'StarWarsFilms/static/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

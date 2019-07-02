@@ -1,8 +1,10 @@
+{% load crispy_forms_tags %}
 
-<form action="{% url 'detailFilm' %}" class="form-inline-lg" method="POST">{% csrf_token %}
+<form action="{% url 'detailFilm' %}" class="form-inline-lg" method="POST">
+    {% csrf_token %}
     <div class="form-group row">
         <div class="col-12 col-sm-10 mt-2">
-            <input type="text" list="filmNames" class="form-control" id="searhInput" placeholder="Search Star Wars film">
+            {{ form|crispy }}
             <datalist id="filmNames">
                 {% for name in films_name %}
                 <option value="{{ name }}"></option>
