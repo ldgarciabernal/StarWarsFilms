@@ -1,11 +1,11 @@
 import requests
 import json
 from django.conf import settings
-from apiService import get_all, get_by_url
+from apiConsumer.services import apiService
 
 
 def get_people(prefix):
-    response = get_all(prefix)
+    response = apiService.get_all(prefix)
     if response == None:
         return []
     
@@ -13,7 +13,7 @@ def get_people(prefix):
     return people
 
 def get_person(url):
-    response = get_by_url(url)
+    response = apiService.get_by_url(url)
     if response == None:
         return []
 

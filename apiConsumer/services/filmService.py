@@ -1,10 +1,10 @@
 import requests
 import json
 from django.conf import settings
-from apiService import get_all
+from apiConsumer.services import apiService
 
 def get_film_by_title(prefix, title):
-    response = get_all(prefix)
+    response = apiService.get_all(prefix)
     if response == None:
         return []
     
@@ -16,7 +16,7 @@ def get_film_by_title(prefix, title):
 
 
 def get_films_title(prefix):
-    response = get_all(prefix)
+    response = apiService.get_all(prefix)
     if response == None:
         return []
     

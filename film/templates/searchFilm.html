@@ -10,19 +10,19 @@
         <img class="homeLogo" src="{% static 'image/sw_logo.png' %}">
     </div>
 </div>
-<div class="row">
-    <div class="col-8">
+<div class="row mt-5 px-4">
+    <div class="col-sm-12 col-lg-7 offset-lg-1">
         <div class="row">
-            <div class="col-10 offset-1">
-
+            <div class="col-12">
+                {% include 'searchTemplate/form.html' %}
             </div>
             <div class="col-6 offset-3">
-
+                {% include 'searchTemplate/personCarousel.html' with people=people %}
             </div>
         </div>
     </div>
-    <div class="col-4">
-
+    <div class="col-sm-12 col-lg-3">
+        {% include 'searchTemplate/history.html' %}
     </div>
 </div>
 {% endblock %}
