@@ -1,0 +1,18 @@
+@import "../variables";
+
+.btn_search {
+    color: $white !important;
+    background-color: $main_color !important;
+    border-color: $main_color !important;
+
+    &:hover {
+        color: $white !important;
+        background-color: $hover_color !important;
+        border-color: $hover_color !important;
+    }
+
+    @media #{$movil_breakpoint_width} {
+        margin-top: 1.5rem !important;
+        width: 100% !important;
+    }
+}

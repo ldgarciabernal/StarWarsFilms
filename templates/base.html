@@ -7,28 +7,31 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>SWFilms</title>
-  <link rel="icon" href="{% static 'image/favicon.ico' %}"/>
-  
-  <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" />
+    <title>SWFilms</title>
+    <link rel="icon" href="{% static 'image/favicon.ico' %}"/>
 
-  {% block styles %}
-  <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.min.css' %}">
-  {% endblock %}
-  {% block scripts %}
-  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-  <script src="{% static 'bootstrap-4.3.1-dist/bootstrap.min.js' %}"></script>
-  {% endblock %}
+    <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" />
+
+    {% block styles %}
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.min.css' %}">
+    {% endblock %}
+    {% block scripts %}
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap-4.3.1-dist/js/bootstrap.min.js' %}"></script>
+    {% endblock %}
 </head>
 
 <body>
 <div style="display: none;">Star Wars API</div>
 <div class="container-fluid"> 
-    {% block content %}
-
-    {% endblock %}
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-6 offset-sm-3 text-center mt-4">
+            <img class="homeLogo" src="{% static 'image/sw_logo.png' %}">
+        </div>
+    </div>
+    {% block content %}{% endblock %}
 </div>
 </body>
 </html>

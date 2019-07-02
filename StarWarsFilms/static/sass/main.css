@@ -1,3 +1,15 @@
+.carousel_image {
+  height: auto;
+  width: 18.75rem !important;
+  opacity: 0.4;
+  margin: 0 auto; }
+
+.homeLogo {
+  width: 18rem; }
+
+.main_color {
+  color: #0e4e92; }
+
 * {
   cursor: url("/static/image/lightsaber_cursor.png"), auto; }
 
@@ -6,7 +18,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
-body, html {
+html {
+  height: 100% !important; }
+  @media movil_breakpoint_width {
+    html {
+      height: auto !important; } }
+
+body {
   height: 100% !important; }
 
 #body:before {
@@ -16,9 +34,19 @@ body, html {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #ffffff; }
+  background-color: #FFFFFF; }
 
-.homeLogo {
-  width: 18rem; }
+.btn_search {
+  color: #FFFFFF !important;
+  background-color: #0e4e92 !important;
+  border-color: #0e4e92 !important; }
+  .btn_search:hover {
+    color: #FFFFFF !important;
+    background-color: #1c8aff !important;
+    border-color: #1c8aff !important; }
+  @media screen and (max-width: 575) {
+    .btn_search {
+      margin-top: 1.5rem !important;
+      width: 100% !important; } }
 
 /*# sourceMappingURL=main.css.map */

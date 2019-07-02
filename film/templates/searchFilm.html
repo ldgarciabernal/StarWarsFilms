@@ -5,24 +5,23 @@
 {% load static %}
 
 {% block content %}
-<div class="row">
-    <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-6 offset-sm-3 text-center mt-4">
-        <img class="homeLogo" src="{% static 'image/sw_logo.png' %}">
-    </div>
-</div>
 <div class="row mt-5 px-4">
-    <div class="col-sm-12 col-lg-7 offset-lg-1">
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 offset-md-2 offset-lg-2 offset-xl-3">
         <div class="row">
             <div class="col-12">
                 {% include 'searchTemplate/form.html' %}
             </div>
-            <div class="col-6 offset-3">
-                {% include 'searchTemplate/personCarousel.html' with people=people %}
-            </div>
         </div>
     </div>
-    <div class="col-sm-12 col-lg-3">
-        {% include 'searchTemplate/history.html' %}
+    <div class="col-sm-12 col-lg-12">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 offset-lg-1 my-3">
+                {% include 'searchTemplate/personCarousel.html' with people=people %}
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 my-3">
+                {% include 'searchTemplate/history.html' %}        
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
