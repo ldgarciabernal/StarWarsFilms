@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'film',
     'apiConsumer',
     'sass_processor',
-    'crispy_forms'
+    'crispy_forms',
+    'history',
 ]
 
 MIDDLEWARE = [
